@@ -1,2 +1,2 @@
 #!/bin/bash
-ssh-keygen -t rsa -b 4096 -f new_key -N ""
+echo "$2  $1" | sha256sum -c --status && echo ok || echo invalid
