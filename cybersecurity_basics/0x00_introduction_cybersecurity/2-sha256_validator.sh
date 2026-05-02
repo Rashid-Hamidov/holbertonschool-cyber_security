@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "$2  $1" | sha256sum -c --status && echo ok || echo invalid
+sha256sum -c --status <<< "$2  $1" && echo ok || echo invalid
