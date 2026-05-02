@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $(sha256sum $1 | awk '{print $1}') | grep -q $2 && echo "$1: OK" || echo "$1: FAILED"
+echo "$2  $1" | sha256sum -c
