@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "$2  $1" | sha256sum -c --status && echo ok || echo invalid
+printf '%s  %s\n' "$2" "$1" | sha256sum -c --status && printf ok || printf invalid
